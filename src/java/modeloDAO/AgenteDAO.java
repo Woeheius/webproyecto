@@ -121,4 +121,36 @@ public class AgenteDAO {
             System.out.println("Error: " + e);
         }
     }
+    // Archivo: src/java/modeloDAO/AgenteDAO.java
+
+public Agente validarCredenciales(String login, String password) {
+    String sql = "SELECT * FROM agente WHERE login = ? AND password = ?";
+    Agente agente = null;
+
+    try {
+        con = conexion.Conexion();
+        ps = con.prepareStatement(sql);
+        ps.setString(1, login);
+        ps.setString(2, password);
+        rs = ps.executeQuery();
+
+        if (rs.next()) {
+            agente = new Agente();
+            agente.setId(rs.getInt("id"));
+            agente.setLogin(rs.getString("login"));
+            agente.setPassword(rs.getString("password"));
+            agente.setCedula(rs.getString("cedula"));
+            agente.setNombreCompleto(rs.getString("nombre_completo"));
+            agente.setDireccion(rs.getString("direccion"));
+            agente.setFechaNacimiento(rs.getString("fecha_nacimiento"));
+            agente.setFechaExpedicion(rs.getString("fecha_expedicion"));
+            agente.setCorreo(rs.getString("correo"));
+            agente.setCelular(rs.getString("celular"));
+        }
+    } catch (SQLException e) {
+        System.out.println("Error al validar credenciales: " + e.getMessage());
+    }
+    return agente;
+}
+
 }

@@ -1,0 +1,37 @@
+/* Archivo: style.css */
+
+body {
+    background-color: #F7F7F7;
+}
+
+h2 {
+    color: #4A148C;
+    font-weight: bold;
+}
+
+.table th {
+    background-color: #4A148C;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #4A148C;
+    border-color: #4A148C;
+}
+
+.btn-primary:hover {
+    background-color: #6A1B9A;
+    border-color: #6A1B9A;
+}
+
+.navbar {
+    background-color: #4A148C !important;
+}
+
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: #D1C4E9 !important;
+}
