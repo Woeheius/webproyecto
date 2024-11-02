@@ -9,7 +9,10 @@
     <title>Inmobiliaria S.A.</title>
 
     <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
